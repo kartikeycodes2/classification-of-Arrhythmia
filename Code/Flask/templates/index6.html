@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block content %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <h2 style="color:aliceblue;font-family:Roboto;font-size:60">
+        <center>ECG Arrhythmia Classification</center>
+    </h2>
+    
+    <div>
+        <form id="upload-file" method="post" enctype="multipart/form-data">
+            <center> <label for="imageUpload" class="upload-label">
+                    Choose ECG Image
+                </label>
+                <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+            </center>
+        </form>
+    
+        <center>
+            <div class="image-section" style="display:none;">
+                <div class="img-preview">
+                    <div id="imagePreview">
+                    </div>
+        </center>
+    </div>
+    <center>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+        </div>
+    </center>
+    </div>
+    
+    <div class="loader" style="display:none;"></div>
+    
+        <h3 style="color:rgb(210, 241, 255)" id="result">
+        <span> </span>
+    </h3>
+    
+    
+    </div>
+    
+    </div>
+    
+    
+
+{% endblock %}

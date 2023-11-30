@@ -25,7 +25,7 @@ def information():
 
 @app.route("/upload") #default route
 def test():
-    return render_template("index.html")#rendering html page
+    return render_template("index6.html")#rendering html page
 
 
 @app.route("/predict",methods=["GET","POST"]) #route for our prediction
